@@ -1,4 +1,7 @@
-import { ProfileCard, Description, Avatar,Name, UserTag, UserLocation, UserStats} from "./Profile.styled";
+import PropTypes from 'prop-types';
+
+import { ProfileCard, Description, Avatar, Name, UserTag, UserLocation, UserStats, StatBlock } from "./Profile.styled";
+
 
 export const Profile = ({ user: { username, tag, location, avatar, stats:{followers, views, likes} } }) => {
     return (
@@ -14,19 +17,29 @@ export const Profile = ({ user: { username, tag, location, avatar, stats:{follow
             </Description>
 
             <UserStats>
-                <li>{followers}
+                <StatBlock>
                     <span class="label">Followers</span>
-                    <span class="quantity">1000</span>
-                </li>
-                <li>{views}
+                    <span class="quantity">{stats.followers}</span>
+                </StatBlock>
+                <StatBlock>{views}
                     <span class="label">Views</span>
                     <span class="quantity">2000</span>
-                </li>
-                <li>{likes}
+                </StatBlock>
+                <StatBlock>{likes}
                     <span class="label">Likes</span>
                     <span class="quantity">3000</span>
-                </li>
+                </StatBlock>
             </UserStats>
         </ProfileCard>
     );
+};
+
+ProfileCard.propTypes = {
+    user: PropTypes.shape({
+        username: PropTypes.string.isRequired,
+        location: PropTypes.string.isRequired,
+        followers: PropTypes.number.isRequired,
+        views: PropTypes.number.isRequired,
+        likes: PropTypes.number.isRequired,
+    }),
 };
