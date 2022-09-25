@@ -1,30 +1,21 @@
 import PropTypes from 'prop-types';
-import { Stat, Title, StatItem ,StatLabel,StatValue } from "./Statistics.styled."
-import { StatList } from 'components/StatList/StatList.styled';
+import { Stat, Title, StatList,StatItem ,StatLabel,StatValue } from "./Statistics.styled."
 
-export const Statistics = () => {
+export const Statistics = ({title, stats}) => {
     return (
         <Stat>
-            <Title>Upload stats</Title>
+            <Title>{title}</Title>
 
             <StatList>
-                <StatItem>
-                    <StatLabel >.docx</StatLabel>
-                    <StatValue>4%</StatValue>
-                </StatItem>
-                <StatLabel >.mp3</StatLabel>
-                <StatValue>14%</StatValue>
-                <StatItem>
-                    <StatLabel >.pdf</StatLabel>
-                    <StatValue>41%</StatValue>
-                </StatItem>
-                <StatItem>
-                    <StatLabel >.mp4</StatLabel>
-                    <StatValue>12%</StatValue>
-                </StatItem>
+                {stats.map((stat) => (
+                    <StatItem key={stat.id}>
+                        <StatLabel>{stat.label}</StatLabel>
+                        <StatValue>{stat.percentage}</StatValue>
+                    </StatItem>
+                ))}
             </StatList>
         </Stat>
-    )
+    );
 };
 
 Stat.propTypes = {

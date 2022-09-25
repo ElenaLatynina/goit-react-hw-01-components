@@ -7,9 +7,12 @@ display: block;
 
 export const Title = styled.h2`
 font-weight:900;
+text-transform:uppercase;
 
 `;
-
+export const StatList = styled.ul`
+list-style: none;
+`;
 
 
 export const StatItem = styled.li`
