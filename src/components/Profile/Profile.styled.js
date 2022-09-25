@@ -68,20 +68,21 @@ font-weight: 700;
 
 export const StatBlock = styled.li`
 width: 110px;
-border: .5px solid rgba(160, 158, 158, 0.486);
+border: 0.3px solid rgba(160, 158, 158, 0.486);
 background-color: rgba(219, 228, 236, 0.379);
 
 `; 
 
 export const StatLabel = styled.label`
 display: block;
-margin: 20px 25px 0;
+margin: 20px 20px 0;
+font-size: 16px;
 color: rgba(28, 27, 27, 0.342);
 `;
 
 export const StatValue = styled.span`
 display: block;
-margin: 0 25px 25px;
-font-size: 20px;
+margin: 4px 20px 20px;
+font-size: 16px;
 color: rgba(28, 27, 27, 0.783);
 `;
