@@ -17,15 +17,15 @@ export const Profile = ({ user: { username, tag, location, avatar, stats:{follow
             <UserStats>
                 <StatBlock>
                     <StatLabel>Followers</StatLabel>
-                    <StatValue>{followers}</StatValue>
+                    <StatValue>{new Intl.NumberFormat('en-IN').format(followers)}</StatValue>
                 </StatBlock>
                 <StatBlock>
                     <StatLabel>Views</StatLabel>
-                    <StatValue>{views}</StatValue>
+                    <StatValue>{new Intl.NumberFormat('en-IN').format(views)}</StatValue>
                 </StatBlock>
                 <StatBlock>
                     <StatLabel>Likes</StatLabel>
-                    <StatValue>{likes }</StatValue>
+                    <StatValue>{new Intl.NumberFormat('en-IN').format(likes)}</StatValue>
                 </StatBlock>
             </UserStats>
         </ProfileCard>
