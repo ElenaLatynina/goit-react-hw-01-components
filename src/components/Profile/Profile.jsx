@@ -1,9 +1,8 @@
 import PropTypes from 'prop-types';
 
-import { ProfileCard, Description, Avatar, Name, UserTag, UserLocation, UserStats, StatBlock } from "./Profile.styled";
+import { ProfileCard, Description, Avatar, Name, UserTag, UserLocation, UserStats, StatBlock, StatLabel, StatValue} from "./Profile.styled";
 
-
-export const Profile = ({ user: { username, tag, location, avatar, stats:{followers, views, likes} } }) => {
+export const Profile = ({ user: { username, tag, location, avatar, stats:{followers, likes, views}} }) => {
     return (
         <ProfileCard>
             <Description>
@@ -15,19 +14,18 @@ export const Profile = ({ user: { username, tag, location, avatar, stats:{follow
                 <UserTag>{ tag}</UserTag>
                 <UserLocation>{ location}</UserLocation>
             </Description>
-
             <UserStats>
                 <StatBlock>
-                    <span class="label">Followers</span>
-                    <span class="quantity">{stats.followers}</span>
+                    <StatLabel>Followers</StatLabel>
+                    <StatValue>{followers}</StatValue>
                 </StatBlock>
-                <StatBlock>{views}
-                    <span class="label">Views</span>
-                    <span class="quantity">2000</span>
+                <StatBlock>
+                    <StatLabel>Views</StatLabel>
+                    <StatValue>{views}</StatValue>
                 </StatBlock>
-                <StatBlock>{likes}
-                    <span class="label">Likes</span>
-                    <span class="quantity">3000</span>
+                <StatBlock>
+                    <StatLabel>Likes</StatLabel>
+                    <StatValue>{likes }</StatValue>
                 </StatBlock>
             </UserStats>
         </ProfileCard>
@@ -37,9 +35,11 @@ export const Profile = ({ user: { username, tag, location, avatar, stats:{follow
 ProfileCard.propTypes = {
     user: PropTypes.shape({
         username: PropTypes.string.isRequired,
+        avatar: PropTypes.string.isRequired,
         location: PropTypes.string.isRequired,
         followers: PropTypes.number.isRequired,
         views: PropTypes.number.isRequired,
         likes: PropTypes.number.isRequired,
+        
     }),
 };
