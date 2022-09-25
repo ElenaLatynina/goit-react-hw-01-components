@@ -11,7 +11,7 @@ export const Profile = ({ user: { username, tag, location, avatar, stats:{follow
                     alt="User avatar"
                 />
                 <Name>{username }</Name>
-                <UserTag>{ tag}</UserTag>
+                <UserTag>@{ tag}</UserTag>
                 <UserLocation>{ location}</UserLocation>
             </Description>
             <UserStats>
