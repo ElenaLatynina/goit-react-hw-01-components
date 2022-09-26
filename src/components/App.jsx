@@ -27,7 +27,7 @@ export const App = () => {
   return (
     <>
       <Profile user={user} />
-      <Statistics data={data}/>
+      <Statistics stats={data}/>
     </>
   );
 };

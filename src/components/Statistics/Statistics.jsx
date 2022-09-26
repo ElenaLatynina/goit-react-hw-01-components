@@ -1,24 +1,32 @@
 import PropTypes from 'prop-types';
-import { Stat, Title, StatList,StatItem ,StatLabel,StatValue } from "./Statistics.styled."
+import { Stat, Title, StatList, StatItem ,StatLabel,StatValue } from "./Statistics.styled."
 
-export const Statistics = ({title, stats}) => {
-    return (
-        <Stat>
-            <Title>{title}</Title>
+export const Statistics = ({ title, stats }) => {
 
-            <StatList>
-                {stats.map((stat) => (
-                    <StatItem key={stat.id}>
-                        <StatLabel>{stat.label}</StatLabel>
-                        <StatValue>{stat.percentage}</StatValue>
-                    </StatItem>
-                ))}
-            </StatList>
-        </Stat>
-    );
+    return (<Stat>
+        <Title>{ title}</Title>
+        <StatList>
+            {stats.map(stat => {
+                const colorItem = {
+                    backgroundColor: `#${Math.floor(Math.random() * 16777215).toString(16).padStart(6, 0)}`,
+                };
+                return (<StatItem style={colorItem} key={stat.id}>
+                    <StatLabel>{stat.label}</StatLabel>
+                    <StatValue>{stat.percentage}%</StatValue>
+                </StatItem>
+                )
+            })}
+        </StatList>
+    </Stat>);
 };
 
-Stat.propTypes = {
-    title: PropTypes.string.isRequired,
-    // stats: PropTypes.array.isRequired,
+
+Statistics.propTypes = {
+    stats: PropTypes.arrayOf(
+    PropTypes.exact({
+    id: PropTypes.string.isRequired,
+    label: PropTypes.string.isRequired,
+    percentage: PropTypes.number.isRequired,
+    })
+    ),
 };
