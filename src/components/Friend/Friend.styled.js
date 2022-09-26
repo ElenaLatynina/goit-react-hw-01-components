@@ -17,13 +17,14 @@ margin: auto 0;
 width: 15px;
 height: 15px;
 border-radius: 50%;
+background-color: ${({ isOnline}) => (isOnline === true) ? 'rgb(94, 143, 94)' : 'rgb(206, 101, 101)'};
 `;
 
 export const False = styled.span`
 background: rgb(206, 101, 101)`;
 
 export const True = styled.span`
-background: rgb(206, 101, 101)`;
+background: rgb(94, 143, 94)`;
 
 export const Avatar = styled.img`
 height: 48px;
