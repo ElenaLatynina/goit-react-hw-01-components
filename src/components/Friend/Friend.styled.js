@@ -7,7 +7,9 @@ display: flex;
 padding: 5px 15px;
 margin: 5px 0;
 width: 290px;
-border: none;
+border: 0.5px solid rgba(160, 158, 158, 0.486);
+box-shadow: 0 2px 4px rgba(0, 0, 0, .25);
+
 `;
 
 export const Status = styled.span`
