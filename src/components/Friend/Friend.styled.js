@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 
 
-export const FriendListItem = styled.li``;
+export const Item = styled.li``;
 
 export const Status = styled.span``;
 
