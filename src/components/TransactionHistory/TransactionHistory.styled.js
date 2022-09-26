@@ -20,8 +20,19 @@ color: white;
 export const TD = styled.td`
 text-align: center;
 padding: 16px 0;
-font-size: 16px;
+font-size: 14px;
 border: 1px solid rgba(160, 158, 158, 0.199);
+
+&:nth-child(1){
+    text-transform:capitalize;
+}
 `;
 
-export const TR = styled.tr``;
+export const TR = styled.tr`
+background: white;
+
+&:nth-child(2n+2){
+    background:rgba(220,220,220, 0.655);
+}
+
+`;
