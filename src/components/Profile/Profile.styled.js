@@ -5,7 +5,7 @@ display: flex;
 flex-direction:column;
 
 margin: 40px auto 0;
-width: 330px;
+width: 320px;
 border: .5px solid rgba(160, 158, 158, 0.486);
 
   box-shadow: rgb(0 0 0 / 20%) 0px 2px 1px -1px,
