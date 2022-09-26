@@ -14,6 +14,10 @@ font-size: 16px;
 text-transform: uppercase;
 background:rgba(0,191,255, 0.856);
 color: white;
+
+&:not(:last-child){
+    border: 0.5px solid white;
+}
 `;
 
 
