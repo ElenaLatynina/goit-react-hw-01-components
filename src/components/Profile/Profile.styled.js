@@ -12,13 +12,11 @@ border: .5px solid rgba(160, 158, 158, 0.486);
     rgb(0 0 0 / 14%) 0px 1px 1px 0px, rgb(0 0 0 / 12%) 0px 1px 3px 0px;
 
 text-align: center;
-
 `;
 
 export const Description = styled.div`
 padding:40px  60px;
 text-align:center;
-
 `;
 
 export const Avatar = styled.img`
@@ -26,7 +24,6 @@ width:120px;
 height: 120px;
 border: 0.5px solid rgba(160, 158, 158, 0.486);
 border-radius:50%;
-
 `;
 
 export const Name = styled.p`
@@ -34,7 +31,6 @@ margin-top: 16px;
 margin-bottom:0px;
 font-size:20px;
 font-weight:900;
-
 `;
 
 export const UserTag = styled.p`
@@ -43,7 +39,6 @@ margin-bottom:0px;
 font-size:18px;
 color: rgba(160, 158, 158, 0.486);
 font-weight:700;
-
 `;
 
 export const UserLocation = styled.p`
@@ -52,7 +47,6 @@ margin-bottom:0px;
 font-size:18px;
 color: rgba(160, 158, 158, 0.486);
 font-weight:700;
-
 `;
 
 export const UserStats = styled.ul`
@@ -70,7 +64,6 @@ export const StatBlock = styled.li`
 width: 110px;
 border: 0.3px solid rgba(160, 158, 158, 0.486);
 background-color: rgba(219, 228, 236, 0.379);
-
 `; 
 
 export const StatLabel = styled.label`
